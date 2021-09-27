@@ -8,8 +8,14 @@ const dotenv = require('dotenv');
 dotenv.config({path:'config.env'});
 const PORT = process.env.PORT || 8080; 
 
+const connectDB = require('./server/database/connection');
+
 // log requests
 app.use(morgan("tiny"));
+
+// mongoDB connection
+connectDB();
+
 // parse request to body-parser
 app.use(bodyParser.urlencoded({extended:true}));
 
