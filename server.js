@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 8080;
 const connectDB = require('./server/database/connection');
 
 // log requests
-app.use(morgan("tiny"));
+app.use(morgan("tiny"));    
 
 // mongoDB connection
 connectDB();
