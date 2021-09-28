@@ -37,13 +37,16 @@ exports.find = (req,res)=>{
         const id = req.query.id;
 
         Userdb.findById(id)
-            .then(data=>{
+            .then((data)=>{
                 if(!data){
                     res.status(404).send({
                         message:`Not found user with ${id}`
                     })
                 }else{
+                    //const ejs = require('ejs');
+                    //const html = await ejs.renderFile(view, data, {async:true});
                     res.send(data)
+                   // res.send(html);
                 }
             })
             .catch(err=>{
