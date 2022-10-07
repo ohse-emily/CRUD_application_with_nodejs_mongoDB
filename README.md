@@ -1,1 +1,1 @@
-CRUD practice with Mongoose with node.js
+CRUD practice with Mongoose and node.js
